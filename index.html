@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css" />
+    <!-- <script src="./zoid.min.js"></script> -->
+    <script src="./h-pos.min.js"></script>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 600px;">
+        <img src="./resources/images/pos-logo-128.png" alt="A-POS" style="margin: 40px;">
+        <h4>H-POS Login Demo</h4>
+        <div style="display: flex; justify-content: flex-start; flex-direction: column; min-width: 600px;">
+            <p>Demo Account</p>
+            <code>kuroro98@gmail.com</code>
+            <code>aaaaaa</code>
+        </div>
+
+        <div class="card card-api get" style="margin: 40px;">
+            <div class="card-header" style="display: flex; justify-content: center; min-width: 600px;">
+                <div class="mb-0 justify-content-between card-title">
+                    
+                    <button id="popupLogin" class="btn btn-raised btn-info">Login with H-POS</button>
+                    <div id="result"></div>
+                
+                </div>
+            </div>
+        </div>
+        <h5><a href="https://github.com/A-Value/pos-login-js" target="blank" >Documentation</a></h5>
+    </div>
+    <script>
+        // To render a popup we need to wait for a click event
+        document.querySelector('#popupLogin').addEventListener('click', function () {
+            // Hide the button
+            document.querySelector('#popupLogin').style.display = 'none';
+            // Render the component
+            HPOSLogin.render({
+                onLogin: function (email, token) {
+                    console.log('User logged in with email:', email);
+                    document.querySelector('#result').innerText = email + ' logged in!' + ' Token: ' + token;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
