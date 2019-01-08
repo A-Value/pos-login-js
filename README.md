@@ -1,4 +1,4 @@
-<p align="center"><img width="10%"  src="https://cdn.rawgit.com/A-Value/pos-login-js/master/resources/images/pos-logo-128.png"></p>
+<p align="center"><img width="10%"  src="https://github.com/A-Value/pos-login-js/blob/master/resources/images/pos-logo-128.png"></p>
 
 ### [Demos](https://demo-pos.avalue.co.th)
 
